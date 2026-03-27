@@ -1,0 +1,114 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run `zed: open default settings` from the
+// command palette (cmd-shift-p / ctrl-shift-p)
+{
+  "edit_predictions": {
+    "mode": "subtle",
+    "provider": "zed",
+  },
+  "agent_servers": {
+    "mistral-vibe": {
+      "type": "registry",
+    },
+    "claude-acp": {
+      "type": "registry",
+    },
+  },
+  "agent": {
+    "inline_assistant_model": {
+      "provider": "mistral",
+      "model": "devstral-small-latest",
+      "enable_thinking": false
+    },
+    "default_model": {
+      "provider": "mistral",
+      "model": "devstral-medium-latest",
+    },
+    "favorite_models": [
+      {
+        "provider": "anthropic",
+        "model": "claude-sonnet-4-5",
+      },
+      {
+        "provider": "anthropic",
+        "model": "claude-opus-4-5",
+      },
+    ],
+    "model_parameters": [],
+  },
+  "language_models": {
+    "openai_compatible": {
+      "Synthetic": {
+        "api_url": "https://api.synthetic.new/openai/v1",
+        "available_models": [
+          {
+            "name": "hf:moonshotai/Kimi-K2.5",
+            "max_tokens": 200000,
+            "max_output_tokens": 32000,
+            "max_completion_tokens": 200000,
+            "capabilities": {
+              "tools": true,
+              "images": true,
+              "parallel_tool_calls": false,
+              "prompt_cache_key": false,
+              "chat_completions": true,
+            },
+          },
+        ],
+      },
+    },
+  },
+  "wsl_connections": [
+    {
+      "distro_name": "Ubuntu-bkaplan",
+      "user": null,
+      "projects": [
+        {
+          "paths": ["/home/bkaplan/WORKSPACE/jarvis2-front"],
+        },
+        {
+          "paths": ["/home/bkaplan/WORKSPACE/offre_activee"],
+        },
+        {
+          "paths": ["/home/bkaplan/WORKSPACE/rabbitmq-workers-offre-activee"],
+        },
+      ],
+    },
+  ],
+  "languages": {
+    "JavaScript": {
+      "formatter": {
+        "external": {
+          "command": "prettier",
+          "arguments": ["--stdin-filepath", "{buffer_path}"],
+        },
+      },
+    },
+  },
+  "telemetry": {
+    "diagnostics": true,
+    "metrics": false,
+  },
+  "session": {
+    "trust_all_worktrees": true,
+  },
+  "vim_mode": true,
+  "relative_line_numbers": "enabled",
+  "icon_theme": {
+    "mode": "system",
+    "light": "Zed (Default)",
+    "dark": "Colored Zed Icons Theme Dark",
+  },
+  "ui_font_size": 16,
+  "buffer_font_size": 15,
+  "theme": {
+    "mode": "dark",
+    "light": "Ayu Light",
+    "dark": "Ayu Dark",
+  },
+}
