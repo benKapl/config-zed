@@ -9,15 +9,18 @@
 {
   "edit_predictions": {
     "mode": "subtle",
-    "provider": "zed",
+    "provider": "zed"
   },
   "agent_servers": {
     "mistral-vibe": {
-      "type": "registry",
+      "default_config_options": {
+        "model": "devstral-2"
+      },
+      "type": "registry"
     },
     "claude-acp": {
-      "type": "registry",
-    },
+      "type": "registry"
+    }
   },
   "agent": {
     "inline_assistant_model": {
@@ -27,19 +30,19 @@
     },
     "default_model": {
       "provider": "mistral",
-      "model": "devstral-medium-latest",
+      "model": "devstral-medium-latest"
     },
     "favorite_models": [
       {
         "provider": "anthropic",
-        "model": "claude-sonnet-4-5",
+        "model": "claude-4-6-sonnet-latest"
       },
       {
         "provider": "anthropic",
-        "model": "claude-opus-4-5",
+        "model": "claude-4-6-opus-latest"
       },
     ],
-    "model_parameters": [],
+    "model_parameters": []
   },
   "language_models": {
     "openai_compatible": {
