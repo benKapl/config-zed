@@ -7,16 +7,10 @@
 // from the command palette.
 [
     {
-        "context": "Workspace",
-        "bindings": {
-            // "shift shift": "file_finder::Toggle"
-        }
-    },
-    {
         "context": "Editor && vim_mode == visual && !VimWaiting && !VimObject",
         "bindings": {
             // set Vim Surround to selected element in VISUAL MODE
-            "shift-s": ["vim::PushOperator", { "AddSurrounds": {} }]
+            "shift-s": ["vim::PushAddSurrounds", {}]
         }
     },
     {
@@ -35,5 +29,14 @@
         "bindings": {
             "k j": "vim::SwitchToNormalMode"
         }
+    },
+    {
+      "context": "Terminal",
+      "bindings": {
+        "ctrl-w h": "workspace::ActivatePaneLeft",
+        "ctrl-w l": "workspace::ActivatePaneRight",
+        "ctrl-w k": "workspace::ActivatePaneUp",
+        "ctrl-w j": "workspace::ActivatePaneDown"
     }
+  }
 ]

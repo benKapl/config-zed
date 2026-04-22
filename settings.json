@@ -72,27 +72,17 @@
       "user": null,
       "projects": [
         {
-          "paths": ["/home/bkaplan/WORKSPACE/jarvis2-front"],
+          "paths": ["/home/bkaplan/IFT-REPOS/WORKSPACE/jarvis2-front"],
         },
         {
-          "paths": ["/home/bkaplan/WORKSPACE/offre_activee"],
+          "paths": ["/home/bkaplan/IFT-REPOS/WORKSPACE/offre_activee"],
         },
         {
-          "paths": ["/home/bkaplan/WORKSPACE/rabbitmq-workers-offre-activee"],
+          "paths": ["/home/bkaplan/WORKSPACE/IFT-REPOS/rabbitmq-workers-offre-activee"],
         },
       ],
     },
   ],
-  "languages": {
-    "JavaScript": {
-      "formatter": {
-        "external": {
-          "command": "prettier",
-          "arguments": ["--stdin-filepath", "{buffer_path}"],
-        },
-      },
-    },
-  },
   "telemetry": {
     "diagnostics": true,
     "metrics": false,
@@ -101,6 +91,8 @@
     "trust_all_worktrees": true,
   },
   "vim_mode": true,
+  "use_on_type_format": false,
+  "format_on_save": "on",
   "relative_line_numbers": "enabled",
   "icon_theme": {
     "mode": "system",
