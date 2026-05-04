@@ -38,5 +38,16 @@
         "ctrl-w k": "workspace::ActivatePaneUp",
         "ctrl-w j": "workspace::ActivatePaneDown"
     }
-  }
+  },
+    {
+        "context": "Pane",
+        "unbind": {
+            "ctrl-w": [
+                "pane::CloseActiveItem",
+                {
+                    "close_pinned": false
+                }
+            ]
+        }
+    }
 ]

@@ -1,0 +1,9 @@
+{
+  "Console Log": {
+    "prefix": "clg",
+    "body": [
+      "console.log('${1:variable}:', ${1:variable});$0"
+    ],
+    "description": "Log a variable with a label in JS / TS"
+  }
+}
