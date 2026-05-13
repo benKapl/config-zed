@@ -19,18 +19,6 @@
         }
     },
     {
-        "context": "Editor && vim_mode == insert",
-        "bindings": {
-            "k j": "vim::SwitchToNormalMode"
-        }
-    },
-    {
-        "context": "(Editor && vim_mode == visual)",
-        "bindings": {
-            "k j": "vim::SwitchToNormalMode"
-        }
-    },
-    {
       "context": "Terminal",
       "bindings": {
         "ctrl-w h": "workspace::ActivatePaneLeft",

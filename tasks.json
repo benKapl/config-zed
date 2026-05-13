@@ -4,7 +4,9 @@
 [
     {
         "label": "Television File Finder",
-        "command": "zed \"$(tv files)\"",
+        // "command": "tv files > /tmp/tv_out.txt 2> /tmp/tv_err.txt; cat /tmp/tv_err.txt",
+        // "command": "/mnt/c/Users/BenjaminKAPLAN/AppData/Local/Programs/Zed/bin/zed.exe \"$(tv files)\"",
+        "command": "tv files | xargs -r zed",
         "hide": "always",
         "allow_concurrent_runs": true,
         "use_new_terminal": true
