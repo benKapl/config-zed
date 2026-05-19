@@ -90,10 +90,24 @@
             "user": null,
             "projects": [
                 {
-                    "paths": ["/home/bkaplan/IFT-REPOS/WORKSPACE/jarvis2-front"]
+                    "paths": [
+                        "/home/bkaplan/IFT-REPOS/WORKSPACE/jarvis2-front"
+                    ]
                 },
                 {
-                    "paths": ["/home/bkaplan/IFT-REPOS/WORKSPACE/offre_activee"]
+                    "paths": [
+                        "/home/bkaplan/IFT-REPOS/WORKSPACE/offre_activee"
+                    ]
+                },
+                {
+                    "paths": [
+                        "/home/bkaplan/WORKSPACE"
+                    ]
+                },
+                {
+                    "paths": [
+                        "/home/bkaplan/WORKSPACE/IFT-REPOS/python-scripts/./"
+                    ]
                 },
                 {
                     "paths": [
@@ -127,34 +141,11 @@
         "dark": "Ayu Dark"
     },
     "experimental.theme_overrides": {
-        "background.appearance": "blurred",
-
-        "background": "#4c464290",
-
-        "editor.background": "#00000030",
-
-        "editor.gutter.background": "#00000030",
-
-        "tab_bar.background": "#00000030",
-
-        "terminal.background": "#00000030",
-
-        "toolbar.background": "#00000030",
-
-        "tab.active_background": "#000",
-
-        "tab.inactive_background": "#00000000",
-
-        "status_bar.background": "#00000030",
-
-        "title_bar.background": "#00000030",
-
-        "panel.background": "#00000030",
-
-        "border.variant": "#00000000",
-
-        "scrollbar.track.border": "#00000000",
-
-        "editor.active_line.background": "#00000000"
+        "tab.active_background": "#6d0000"
+    },
+    "languages": {
+        "YAML": {
+            "tab_size": 2
+        }
     }
 }
