@@ -6,36 +6,50 @@
 // To see the default key bindings run `zed: open default keymap`
 // from the command palette.
 [
-    {
-        "context": "Editor && vim_mode == visual && !VimWaiting && !VimObject",
-        "bindings": {
-            // set Vim Surround to selected element in VISUAL MODE
-            "shift-s": ["vim::PushAddSurrounds", {}]
-        }
+  {
+    "context": "Editor && vim_mode == visual && !VimWaiting && !VimObject",
+    "bindings": {
+      // set Vim Surround to selected element in VISUAL MODE
+      "shift-s": ["vim::PushAddSurrounds", {}],
     },
-    {
-        "bindings": {
-            "alt-a": "assistant::ToggleFocus"
-        }
-    },
-    {
-      "context": "Terminal",
-      "bindings": {
-        "ctrl-w h": "workspace::ActivatePaneLeft",
-        "ctrl-w l": "workspace::ActivatePaneRight",
-        "ctrl-w k": "workspace::ActivatePaneUp",
-        "ctrl-w j": "workspace::ActivatePaneDown"
-    }
   },
-    {
-        "context": "Pane",
-        "unbind": {
-            "ctrl-w": [
-                "pane::CloseActiveItem",
-                {
-                    "close_pinned": false
-                }
-            ]
-        }
-    }
+  {
+    "bindings": {
+      "alt-a": "agent::ToggleFocus",
+      "ctrl-b": "workspace::ToggleLeftDock",
+      "ctrl-'": "workspace::ToggleBottomDock",
+    },
+  },
+  {
+    "context": "Editor && vim_mode == insert",
+    "bindings": {
+      "k j": "vim::SwitchToNormalMode",
+    },
+  },
+  {
+    "context": "(Editor && vim_mode == visual)",
+    "bindings": {
+      "k j": "vim::SwitchToNormalMode",
+    },
+  },
+  {
+    "context": "Terminal",
+    "bindings": {
+      "ctrl-w h": "workspace::ActivatePaneLeft",
+      "ctrl-w l": "workspace::ActivatePaneRight",
+      "ctrl-w k": "workspace::ActivatePaneUp",
+      "ctrl-w j": "workspace::ActivatePaneDown",
+    },
+  },
+  {
+    "context": "Pane",
+    "unbind": {
+      "ctrl-w": [
+        "pane::CloseActiveItem",
+        {
+          "close_pinned": false,
+        },
+      ],
+    },
+  },
 ]
