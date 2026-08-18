@@ -1,66 +1,70 @@
-// Zed settings
-//
-// For information on how to configure Zed, see the Zed
-// documentation: https://zed.dev/docs/configuring-zed
-//
-// To see all of Zed's default settings without changing your
-// custom settings, run `zed: open default settings` from the
-// command palette (cmd-shift-p / ctrl-shift-p)
 {
-    "auto_update_extensions": {
-        "php": false
-    },
-    "cli_default_open_behavior": "existing_window",
-    "diff_view_style": "split",
-    "project_panel": {
-        "dock": "left"
-    },
-    "outline_panel": {
-        "dock": "left"
-    },
-    "collaboration_panel": {
-        "dock": "left"
-    },
-    "git_panel": {
-        "dock": "right"
-    },
-    "edit_predictions": {
-        "mode": "subtle",
-        "provider": "zed"
+    "agent": {
+        "default_model": {
+            "model": "devstral-medium-latest",
+            "provider": "mistral"
+        },
+        "dock": "right",
+        "favorite_models": [
+            {
+                "model": "claude-4-6-sonnet-latest",
+                "provider": "anthropic"
+            },
+            {
+                "model": "claude-4-6-opus-latest",
+                "provider": "anthropic"
+            }
+        ],
+        "inline_assistant_model": {
+            "enable_thinking": false,
+            "model": "devstral-medium-latest",
+            "provider": "mistral"
+        },
+        "model_parameters": [],
+        "sidebar_side": "right"
     },
     "agent_servers": {
+        "claude-acp": {
+            "type": "registry"
+        },
         "mistral-vibe": {
             "default_config_options": {
                 "model": "devstral-2"
             },
             "type": "registry"
-        },
-        "claude-acp": {
-            "type": "registry"
         }
     },
-    "agent": {
-        "dock": "right",
-        "inline_assistant_model": {
-            "provider": "mistral",
-            "model": "devstral-medium-latest",
-            "enable_thinking": false
-        },
-        "default_model": {
-            "provider": "mistral",
-            "model": "devstral-medium-latest"
-        },
-        "favorite_models": [
-            {
-                "provider": "anthropic",
-                "model": "claude-4-6-sonnet-latest"
-            },
-            {
-                "provider": "anthropic",
-                "model": "claude-4-6-opus-latest"
-            }
-        ],
-        "model_parameters": []
+    "auto_update_extensions": {
+        "php": false
+    },
+    "buffer_font_size": 15,
+    "cli_default_open_behavior": "existing_window",
+    "collaboration_panel": {
+        "dock": "left"
+    },
+    "context_servers": {
+        "lean-ctx": {
+            "args": [],
+            "command": "/home/bkaplan/.local/bin/lean-ctx",
+            "env": {}
+        }
+    },
+    "diff_view_style": "split",
+    "edit_predictions": {
+        "mode": "subtle",
+        "provider": "zed"
+    },
+    "experimental.theme_overrides": {
+        "tab.active_background": "#6d0000"
+    },
+    "format_on_save": "on",
+    "git_panel": {
+        "dock": "right"
+    },
+    "icon_theme": {
+        "dark": "Colored Zed Icons Theme Dark",
+        "light": "Zed (Default)",
+        "mode": "system"
     },
     "language_models": {
         "openai_compatible": {
@@ -68,41 +72,82 @@
                 "api_url": "https://api.synthetic.new/openai/v1",
                 "available_models": [
                     {
-                        "name": "hf:moonshotai/Kimi-K2.5",
-                        "max_tokens": 200000,
-                        "max_output_tokens": 32000,
-                        "max_completion_tokens": 200000,
                         "capabilities": {
-                            "tools": true,
+                            "chat_completions": true,
                             "images": true,
                             "parallel_tool_calls": false,
                             "prompt_cache_key": false,
-                            "chat_completions": true
-                        }
+                            "tools": true
+                        },
+                        "max_completion_tokens": 200000,
+                        "max_output_tokens": 32000,
+                        "max_tokens": 200000,
+                        "name": "hf:moonshotai/Kimi-K2.5"
                     }
                 ]
             }
         }
     },
+    "languages": {
+        "YAML": {
+            "tab_size": 2
+        },
+        "PHP": {
+            "format_on_save": "off",
+            "language_servers": ["intelephense", "!phpactor", "..."]
+        }
+    },
+    "lsp": {
+        "intelephense": {
+            "initialization_options": {
+                "intelephense.environment.phpVersion": "7.4.0"
+            }
+        }
+    },
+    "outline_panel": {
+        "dock": "left"
+    },
+    "preview_tabs": {
+        "enable_preview_file_from_code_navigation": false,
+        "enable_preview_from_multibuffer": false
+    },
+    "project_panel": {
+        "dock": "left"
+    },
+    "relative_line_numbers": "disabled",
+    "session": {
+        "trust_all_worktrees": true
+    },
+    "tabs": {
+        "file_icons": true
+    },
+    "telemetry": {
+        "diagnostics": true,
+        "metrics": false
+    },
+    "theme": {
+        "dark": "Ayu Dark",
+        "light": "Ayu Light",
+        "mode": "dark"
+    },
+    "thread_panel": {
+        "dock": "right"
+    },
+    "ui_font_size": 16,
+    "use_on_type_format": false,
+    "vim_mode": true,
     "wsl_connections": [
         {
             "distro_name": "Ubuntu-bkaplan",
-            "user": null,
             "projects": [
                 {
-                    "paths": [
-                        "/home/bkaplan/IFT-REPOS/WORKSPACE/jarvis2-front"
-                    ]
+                    "paths": ["/home/bkaplan/IFT-REPOS/WORKSPACE/jarvis2-front"]
                 },
                 {
-                    "paths": [
-                        "/home/bkaplan/IFT-REPOS/WORKSPACE/offre_activee"
-                    ]
+                    "paths": ["/home/bkaplan/IFT-REPOS/WORKSPACE/offre_activee"]
                 },
                 {
-                    "paths": [
-                        "/home/bkaplan/WORKSPACE"
-                    ]
+                    "paths": ["/home/bkaplan/WORKSPACE"]
                 },
                 {
                     "paths": [
@@ -114,38 +159,8 @@
                         "/home/bkaplan/WORKSPACE/IFT-REPOS/rabbitmq-workers-offre-activee"
                     ]
                 }
-            ]
+            ],
+            "user": null
         }
-    ],
-    "telemetry": {
-        "diagnostics": true,
-        "metrics": false
-    },
-    "session": {
-        "trust_all_worktrees": true
-    },
-    "vim_mode": true,
-    "use_on_type_format": false,
-    "format_on_save": "on",
-    "relative_line_numbers": "disabled",
-    "icon_theme": {
-        "mode": "system",
-        "light": "Zed (Default)",
-        "dark": "Colored Zed Icons Theme Dark"
-    },
-    "ui_font_size": 16,
-    "buffer_font_size": 15,
-    "theme": {
-        "mode": "dark",
-        "light": "Ayu Light",
-        "dark": "Ayu Dark"
-    },
-    "experimental.theme_overrides": {
-        "tab.active_background": "#6d0000"
-    },
-    "languages": {
-        "YAML": {
-            "tab_size": 2
-        }
-    }
+    ]
 }

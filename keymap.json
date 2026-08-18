@@ -19,14 +19,14 @@
         }
     },
     {
-      "context": "Terminal",
-      "bindings": {
-        "ctrl-w h": "workspace::ActivatePaneLeft",
-        "ctrl-w l": "workspace::ActivatePaneRight",
-        "ctrl-w k": "workspace::ActivatePaneUp",
-        "ctrl-w j": "workspace::ActivatePaneDown"
-    }
-  },
+        "context": "Terminal",
+        "bindings": {
+            "ctrl-w h": "workspace::ActivatePaneLeft",
+            "ctrl-w l": "workspace::ActivatePaneRight",
+            "ctrl-w k": "workspace::ActivatePaneUp",
+            "ctrl-w j": "workspace::ActivatePaneDown"
+        }
+    },
     {
         "context": "Pane",
         "unbind": {
@@ -36,6 +36,24 @@
                     "close_pinned": false
                 }
             ]
+        }
+    },
+    {
+        "context": "Workspace",
+        "bindings": {
+            "ctrl-alt-n": "agent::NewTerminalThread"
+        }
+    },
+    {
+        "context": "Workspace",
+        "bindings": {
+            "ctrl-alt-p": ["task::Spawn", { "task_name": "Find file (fzf)" }]
+        }
+    },
+    {
+        "context": "Workspace",
+        "unbind": {
+            "ctrl-j": "workspace::ToggleBottomDock"
         }
     }
 ]
